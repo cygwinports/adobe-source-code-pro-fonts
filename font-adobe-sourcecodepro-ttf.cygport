@@ -1,0 +1,24 @@
+inherit font
+
+NAME="font-adobe-sourcecodepro-ttf"
+VERSION=1.013
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="Adobe SourceCodePro monospace fonts"
+DESCRIPTION="Source Sans is a set of monospaced OpenType fonts that have been
+designed to work well coding environments. This family of fonts is a
+complementary design to the Source Sans family."
+HOMEPAGE="http://sourceforge.net/projects/sourcecodepro.adobe/"
+SRC_URI="mirror://sourceforge/sourcecodepro.adobe/SourceCodePro_FontsOnly-${VERSION}.zip"
+SRC_DIR="SourceCodePro_FontsOnly-${VERSION}"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	fontinto OTF
+	dofont OTF/*
+	fontinto TTF
+	dofont TTF/*
+	dodoc *.html
+}
