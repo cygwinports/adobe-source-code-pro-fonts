@@ -1,7 +1,7 @@
 inherit font
 
 NAME="font-adobe-sourcecodepro-ttf"
-VERSION=1.013
+VERSION=1.017
 RELEASE=1
 CATEGORY="X11"
 SUMMARY="Adobe SourceCodePro monospace fonts"
